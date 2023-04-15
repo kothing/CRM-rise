@@ -1,0 +1,50 @@
+{
+    "name": "ddeboer/imap",
+    "description": "Object-oriented IMAP for PHP",
+    "license": "MIT",
+    "keywords": [
+        "email",
+        "mail",
+        "imap"
+    ],
+    "authors": [
+        {
+            "name": "David de Boer",
+            "email": "david@ddeboer.nl"
+        },
+        {
+            "name": "Filippo Tessarotto",
+            "email": "zoeslam@gmail.com"
+        },
+        {
+            "name": "Community contributors",
+            "homepage": "https://github.com/ddeboer/imap/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": "~8.1.0 || ~8.2.0",
+        "ext-dom": "*",
+        "ext-iconv": "*",
+        "ext-imap": "*",
+        "ext-libxml": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.14.4",
+        "laminas/laminas-mail": "^2.22.0",
+        "phpstan/phpstan": "^1.9.17",
+        "phpstan/phpstan-phpunit": "^1.3.4",
+        "phpstan/phpstan-strict-rules": "^1.4.5",
+        "phpunit/phpunit": "^10.0.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ddeboer\\Imap\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ddeboer\\Imap\\Tests\\": "tests/"
+        }
+    }
+}

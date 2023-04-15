@@ -1,0 +1,1 @@
+<li class="email-template-tabs"><a role="presentation" data-bs-toggle="tab" href="<?php echo echo_uri("email_templates/different_language_form/" . $tab_data->id); ?>" data-reload="1"  data-bs-target="#email-template-form-default"><?php echo ucfirst($tab_data->language); ?></a></li>

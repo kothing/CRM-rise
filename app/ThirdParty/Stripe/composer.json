@@ -1,0 +1,10 @@
+{
+    "require": {
+        "stripe/stripe-php": "^10.10"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    }
+}

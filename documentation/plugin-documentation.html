@@ -1,0 +1,1143 @@
+<!DOCTYPE html>  
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="RISE - Ultimate Project Manager & CRM is the best way to manage your projects, clients and team members. You can easily collaborate with your team and monitor your work.">
+        <meta name="author" content="fairsketch">
+
+        <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png" />
+
+        <title>RISE - Ultimate Project Manager & CRM - The ultimate solution of project, client and team </title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" href="assets/css/font.css" media="screen">
+        <link rel="stylesheet" href="assets/css/style.css" media="screen">
+
+        <script src="assets/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery-3.5.1.min.js"></script>
+        <script src="assets/js/feather-icons/feather.min.js"></script>
+        <script src="assets/js/helper.js"></script>
+    </head>    
+
+    <body>
+        <div class="page-wrapper" style="overflow-x: hidden;">
+            <div class="header-section">
+                <nav class="navbar navbar-expand-sm navbar-light navbar-default" aria-label="Second navbar example">
+                    <div class="container-fluid content">
+                        <div class="nav-item ps-2 pe-3 sidebar-toggle-btn d-none">
+                            <i data-feather="menu" class="icon"></i>
+                        </div>
+
+                        <a class="navbar-brand" href=""><img class="fairsketch-logo" src="assets/images/default-stie-logo.png"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span data-feather="chevron-down" style="color: #fff"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="https://kothing.github.io/rise" target="_blank">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Documentation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="plugin-documentation.html">Plugins</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="text-center header-brand">
+                    <img class="dashboard-image" src="assets/images/default-stie-logo.png">
+                    <div class="fs-3 text-white mt-2">RISE - Ultimate Project Manager & CRM</div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="content pt-5">
+                    <div class="wrapper">
+
+                        <div id="sticky-anchor"></div>
+                        <div class="sidebar" id="sticky">
+                            <ul class="sidebar-menu" id="sidebar-menu">
+                                <li class="main menu-item" data-id="introduction"><a href="#introduction" title="Introduction">Introduction</a></li>
+                                <li class="main menu-item" data-id="build_your_first_plugin"><a href="#build_your_first_plugin" title="Build your first plugin">Build your first plugin</a></li>
+                                <li class="main menu-item" data-id="common_working_processes"><a href="#common_working_processes" title="Common working processes">Common working processes</a></li>
+                                <li class="main menu-item" data-id="available_functions"><a href="#available_functions" title="Available functions">Available functions</a></li>
+                                <li class="main menu-item" data-id="available_hooks"><a href="#available_hooks" title="Available hooks">Available hooks</a></li>
+                                <li class="main menu-item" data-id="best_practices"><a href="#best_practices" title="Best practices">Best practices</a></li>
+                            </ul>
+                        </div>
+                        <div id="page-container" class="box-content">
+                            <div id="page-content" class="clearfix">
+
+                                <section id="introduction">
+                                    <div class="card card-default">
+                                        <div class="page-title clearfix">
+                                            <h2 class="text-body">Introduction</h2>
+                                        </div>
+                                        <div class="p20">
+                                            <p>
+                                                Are you willing to create plugins for RISE CRM and sell them on CodeCanyon or create your own features based on your need? This guidelines will show you the way to do that. </p>
+                                            <p>
+                                                RISE 2.8 comes with a built-in feature to create plugins and integrate additional features along with the core functionalities. </p>
+                                            <p>
+                                                Plugins are packages of code that supports a form of code modularization to help you create reusable code. Which extends the core functionality of main app.</p>
+                                            <p>
+                                                The plugins can consist of action hooks, filters, controllers, models, libraries, languages, views, config files, helpers and also can access the base code of RISE CRM.</p>
+
+                                            <h2 class="text-body mb20 mt20">Before starting a plugin</h2>
+                                            <ol>
+                                                <li><strong>Plugin maintenance:</strong> It’s your responsibility to maintain the plugins you're developing. When there will be RISE CRM major changes, it's your job to make them compatible with the latest version.</li> 
+                                                <li><strong>Plugin security:</strong> While building your plugins, please make sure that it's fully secured and use existing functions and methods that exists in the Codeigniter PHP framework.</li> 
+                                                <li><strong>Our support for your plugin:</strong> We won’t offer you support for creating plugins, if it seems to you that something doesn't work right or it’s a bug, feel free to send an email to <a href="mailto:support@fairsketch.com" target="_top">support@fairsketch.com</a></li> 
+                                                <li><strong>Selling plugins on CodeCanyon:</strong> If you want to build plugins and sell them as an <a href="https://author.envato.com/join" target="_blank">Author</a> on <a href="https://codecanyon.net/" target="_blank">CodeCanyon</a>, you are absolutely free to do so. But keep in mind that because of our exclusivity agreement, you can only sell the plugins exclusively on CodeCanyon. You can’t present us as a partner. It should be as an individual or company. Publishing a plugin from your Envato account, which means that you own all the copyright to the plugin and the code.</li> 
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section id="build_your_first_plugin">
+                                    <div class="card card-default">
+                                        <div class="page-title clearfix">
+                                            <h2 class="text-body">Build your first plugin</h2>
+                                        </div>
+                                        <div class="p20">
+                                            <ul>
+                                                <li>Create a plugin with a <strong>unique folder name</strong>.</li>
+                                                <li>Create a <strong>index.php</strong> file at the root directory of plugin folder.</li>
+                                                <li>
+                                                    Add meta data to index.php file as like below:
+                                                    <pre>
+
+    &#60;?php
+
+    //Prevent direct access
+    defined('PLUGINPATH') or exit('No direct script access allowed');
+
+    /*
+    Plugin Name: Your Plugin Name
+    Plugin URL: https://codecanyon.net/item/your_item
+    Description: Your plugin description
+    Version: 1.0
+    Requires at least: 2.8
+    Author: Author name
+    Author URL: https://codecanyon.net/user/author_url
+    */
+                                                    </pre>
+
+                                                    <p class="alert alert-warning">Note: The meta data is needed to add only in index.php file.</p>
+                                                </li>
+                                                <li>This is now indexed in RISE. Go to Settings > Plugins. There you can install and activate this plugin.</li>
+                                                <li>You can also create a .zip file with your plugin folder and install it from Settings > Plugins.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="common_working_processes">
+                                    <div class="card card-default">
+                                        <div class="page-title clearfix">
+                                            <h2 class="text-body">Common working processes</h2>
+                                        </div>
+                                        <div class="p20">
+                                            <p>Visit the official documentation of <a href="https://kothing.github.io/rise" target="_blank">CodeIgniter</a> for advanced information. </p>
+                                            <ul>
+                                                <li>
+                                                    <strong>Routes: </strong> Specify the routes to detect plugin from main app. 
+                                                    <pre>
+    
+    &#60;?php
+
+    namespace Config;
+
+    $routes = Services::routes();
+
+    $routes->get('my_plugin', 'My_Plugin::index', ['namespace' => 'My_Plugin\Controllers']);
+    $routes->get('my_plugin/(:any)', 'My_Plugin::$1', ['namespace' => 'My_Plugin\Controllers']);
+    $routes->post('my_plugin/(:any)', 'My_Plugin::$1', ['namespace' => 'My_Plugin\Controllers']); //will be required if any data need to be posted 
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>Controllers: </strong>
+                                                    <pre>
+    
+    &#60;?php
+
+    namespace My_Plugin\Controllers;
+
+    use App\Controllers\Security_Controller; //access main app's controller
+
+    class My_Plugin extends Security_Controller {
+        //your methods
+    }
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>Models: </strong>
+                                                    <pre>
+    
+    &#60;?php
+
+    namespace My_Plugin\Controllers;
+
+    use App\Models\Crud_model; //access main app's models
+
+    class My_Plugin_Model extends Crud_model {
+        //your methods
+    }
+                                                    </pre>
+                                                    <p>Calling your models:</p>
+                                                    <pre>
+
+    $My_Plugin_Model = new \My_Plugin\Models\My_Plugin_Model();
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>Libraries: </strong>
+                                                    <pre>
+    
+    &#60;?php
+
+    namespace My_Plugin\Libraries;
+
+    class My_Plugin_Library {
+        //your methods
+    }
+                                                    </pre>
+                                                    <p>Calling your library: </p>
+                                                    <pre>
+
+    $my_plugin_library = new \My_Plugin\Libraries\My_Plugin_Library();
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>Languages: </strong>Follow the same directory design for languages. Like <strong>My_Plugin/Language/english/custom_lang.php and default_lang.php</strong>. Remember to add an unique prefix with your language key. Here has an example:
+                                                    <pre>
+    
+    &#60;?php
+
+    $lang["my_plugin_show_staff_members"] = "Show staff members";
+                                                    </pre>
+                                                    <p>Then you can use the RISE's <code>app_lang("my_plugin_show_staff_members");</code> to retrieve the language value. Add all language directories as like the main app if you wish to support all language for your plugin. </p>
+                                                </li>
+                                                <li>
+                                                    <strong>Views: </strong>
+                                                    <pre>
+    
+    $view_data['foo'] = "bar";
+
+    //$this->template->rander() function will show the view with left menu and topbar by default.
+    return $this->template->rander('My_Plugin\Views\folder\index', $view_data);
+
+    //$this->template->view() function will show only the view, but here you'll get the login user's info as $login_user variable if any login user exists
+    return $this->template->view('My_Plugin\Views\folder\index', $view_data);
+
+    //default view() function of CI
+    return view('My_Plugin\Views\folder\index', $view_data);
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>Helpers: </strong>Add an helper file in My_Plugin/Helpers folder (like my_plugin_general_helper.php) and call it like this:
+                                                    <pre>
+    
+    helper("my_plugin_general_helper");
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>ThirdParty: </strong>Load a third party file like this:
+                                                    <pre>
+    
+    require_once(PLUGINPATH . "My_Plugin/ThirdParty/library_folder/vendor/autoload.php");
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>Loading assets: </strong>
+                                                    <pre>
+    
+    &#60;link rel='stylesheet' type='text/css' href='" . base_url(PLUGIN_URL_PATH . "My_Plugin/assets/css/my_plugin_styles.css") . "' />
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    <strong>File management: </strong>Follow the same workflow as we're doing now for file management. Only change the target directory to this:
+                                                    <pre>
+    
+    PLUGIN_URL_PATH. "My_Plugin/files/my_plugin_files/"
+                                                    </pre>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="available_functions">
+                                    <div class="card card-default">
+                                        <div class="page-title clearfix">
+                                            <h2 class="text-body">Available functions</h2>
+                                        </div>
+                                        <div class="p20">
+                                            <p>Call this functions in your My_Plugin folder/index.php file.</p>
+                                            <ul>
+                                                <li>
+                                                    Register installation hook. When the plugin is about to install, this function will be triggered. Execute required sql queries or purchase code validation here.
+
+                                                    <pre>
+
+    register_installation_hook("My_Plugin", function ($item_purchase_code) {
+        //validate purchase code if you wish
+        if (!validate_purchase_code($item_purchase_code)) {
+            echo json_encode(array("success" => false, 'message' => "Invalid purchase code"));
+            exit();
+        }
+
+        //run necessary sql queries 
+        $db = db_connect('default');
+        $db_prefix = get_db_prefix();
+        $db->query("SET sql_mode = ''");
+        $db->query("CREATE TABLE IF NOT EXISTS `" . $db_prefix . "plugin_table` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `title` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL ,
+            `deleted` tinyint(1) NOT NULL DEFAULT '0',
+            PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;");
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Register uninstallation hook. When the plugin is about to uninstall, this function will be triggered.
+
+                                                    <pre>
+
+    register_uninstallation_hook("My_Plugin", function () {
+        //run something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Register activation hook. When the plugin is about to activate, this function will be triggered.
+
+                                                    <pre>
+
+    register_activation_hook("My_Plugin", function () {
+        //run something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Register deactivation hook. When the plugin is about to deactivate, this function will be triggered.
+
+                                                    <pre>
+
+    register_deactivation_hook("My_Plugin", function () {
+        //run something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Register update hook. Provide information to update your plugin. Please note that, if your updates has any version comparability, check that while updating. 
+
+                                                    <pre>
+
+    register_update_hook("My_Plugin", function () {
+        //show necessary information to update this plugin in the modal
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Register data insert hook. 
+
+                                                    <pre>
+
+    register_data_insert_hook(function ($data) {
+        //some data has been inserted
+        
+        /* 
+        the $data array has 3 items
+        id => inserted id
+        table => associated table
+        data => inserted data array
+        */
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Register data update hook. 
+
+                                                    <pre>
+
+    register_data_update_hook(function ($data) {
+        //some data has been updated
+        
+        /* 
+        the $data array has 3 items
+        id => updated id
+        table => associated table
+        data => updated data array
+        */
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Register data delete hook. 
+
+                                                    <pre>
+
+    register_data_delete_hook(function ($data) {
+        //some data has been deleted
+        
+        /* 
+        the $data array has 2 items
+        id => deleted id
+        table => associated table
+        */
+    });
+                                                    </pre>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="available_hooks">
+                                    <div class="card card-default">
+                                        <div class="page-title clearfix">
+                                            <h2 class="text-body">Available hooks</h2>
+                                        </div>
+                                        <div class="p20">
+                                            <p>
+                                                Call this hooks in your My_Plugin folder/index.php file. <br />
+                                                <b>Important:</b> When you use add_filter hook function, always return the first parameter with/without modifying it as per needs. 
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Add an url to the CSRF exclude uris.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_app_csrf_exclude_uris', function ($app_csrf_exclude_uris) {
+        if (!in_array("plugin_controller.*+", $app_csrf_exclude_uris)) {
+            array_push($app_csrf_exclude_uris, "plugin_controller.*+");
+        }
+
+        return $app_csrf_exclude_uris;
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Execute an script after running cron job.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_after_cron_run', function() {
+        //run something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add an widget to custom dashboard panel. 
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_dashboard_widget', function ($default_widgets_array) {
+        array_push($default_widgets_array, array(
+            "widget" => "widget_name",
+            "widget_view" => view("My_Plugin\Views\widget")
+        ));
+
+        return $default_widgets_array;
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add some action links in Settings > Plugins table.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_action_links_of_My_Plugin', function ($action_links_array) {
+        $action_links_array = array(
+            anchor(get_uri("my_plugin/settings"), "Settings"),
+            anchor(get_uri("my_plugin/get_support"), "Supports")
+        );
+
+        return $action_links_array;
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    User logged in successfully/there has logged in user who is about to access the app. This is the state of right before that. 
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_before_app_access', function ($data) {
+        $login_user_id = get_array_value($data, "login_user_id"); //logged in user id if it's valid login
+        $redirect = get_array_value($data, "redirect"); //either it'll redirect to signin page or not if there has invalid login
+    
+        //perform something before accessing to the main app
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add a menu item for staff users.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_staff_left_menu', function ($sidebar_menu) {
+        $sidebar_menu["left_menu_item"] = array(
+            "name" => "item_name",
+            "url" => "my_plugin/url",
+            "class" => "feather-icon-class", //like book
+            "position" => 5 //will be on the position after 4th item
+        );
+
+        return $sidebar_menu;
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add a menu item for client users.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_client_left_menu', function ($sidebar_menu) {
+        $sidebar_menu["left_menu_item"] = array(
+            "name" => "item_name",
+            "url" => "my_plugin/url",
+            "class" => "feather-icon-class", //like book
+            "position" => 5 //will be on the position after 4th item
+        );
+
+        return $sidebar_menu;
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    A new notification created. Do something after that.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_post_notification', function ($notification_id) {
+        //do something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Create notifications. First, add the notification setting to notification_settings table while installing the plugin. <br />
+                                                    <p>Note: On deactivation of your plugin, the notification setting will still be shown in notification settings. Because of this, use register_deactivation_hook() and set deleted=1 and register_activation_hook() to revert it again by deleted=0. </p>
+
+                                                    <pre>
+
+    INSERT INTO `notification_settings` (`event`, `category`, `enable_email`, `enable_web`, `notify_to_team`, `notify_to_team_members`, `notify_to_terms`, `deleted`) VALUES
+('your_notification_key', 'your_category', 0, 0, '', '', '', 0);
+                                                    </pre>
+
+                                                    Also add the required id field as you needed to notifications table. <br />
+                                                    <p>Note: Please add prefix (plugin_) with your field and note that, on deactivation of your plugin, the notifications will still be shown in user's notifications area. Because of this, use register_deactivation_hook() and set deleted=1 and register_activation_hook() to revert it again by deleted=0. </p>
+
+                                                    <pre>
+
+    ALTER TABLE `notifications` ADD `plugin_your_item_id` INT(11) NOT NULL AFTER `deleted`;
+                                                    </pre>
+
+                                                    Add notification settings category hook.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_notification_category_suggestion', function ($category_suggestions) {
+        $category_suggestions[] = array("id" => "your_category", "text" => app_lang("your_category"));
+
+        return $category_suggestions;
+    });
+                                                    </pre>
+
+                                                    Add notification config hook.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_notification_config', function ($events_of_hook) {
+        $notification_link = function () {
+            return array("url" => get_uri("notification_link"));
+        };
+
+        $events_of_hook["your_notification_key"] = array( //check ...app/Helpers/notifications_helper.php > function get_notification_config() for better ideas
+            "notify_to" => array("recipient"), //check available values below
+            "info" => $notification_link
+        );
+
+        return $events_of_hook;
+    });
+                                                    </pre>
+
+                                                    Supported notify_to array: 
+
+                                                    <pre>
+
+    array("team_members", "team", "project_members", "client_primary_contact", "client_all_contacts", "task_assignee", "task_collaborators", "comment_creator", "cusomer_feedback_creator", "leave_applicant", "ticket_creator", "ticket_assignee", "estimate_request_assignee", "recipient", "mentioned_members", "owner", "client_assigned_contacts", "post_creator", "order_creator_contact");
+                                                    </pre>
+
+                                                    Prepare query of getting notify_to users:
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_create_notification_where_query', function ($where_queries_from_hook, $data) {
+        //prepare WHERE query and return
+        //check ...app/Models/Notifications_model.php > function create_notification() for better ideas
+
+        /*
+        The $data variable has this key values:
+        "event" => Event key (your_notification_key).
+        "user_id" => Which user created the notification. If it's 0, then it's created by the app.
+        "options" => It contains another array of available notification item ids. Check ...app/Models/Notifications_model.php > function create_notification() for better ideas.
+        "notify_to_terms" => Notify to terms array as selected in notification setting for this event. Like array("team_members", "team", "project_members").
+        */
+
+        $where_queries_from_hook[] = "YOUR QUERIES";
+        return $where_queries_from_hook;
+    });
+                                                    </pre>
+
+                                                    If you want to show more information with the notification, you'll have to add this hook:
+
+                                                    <pre>
+
+    //for web
+    app_hooks()->add_filter('app_filter_notification_description', function ($notification_descriptions, $notification) {
+        $notification_descriptions[] = view("your_notification_description", array("notification" => $notification)), //check ...app/Views/notifications/notification_description.php
+        return $notification_descriptions;
+    });
+
+    //for slack
+    app_hooks()->add_filter('app_filter_notification_description_for_slack', function ($notification_descriptions, $notification) {
+        $notification_descriptions[] = view("your_notification_description_for_slack", array("notification" => $notification)) //check ...app/Views/notifications/notification_description_for_slack.php
+        return $notification_descriptions;
+    });
+                                                    </pre>
+                                                    Add email templates.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_email_templates', function ($templates_array) {
+        $templates_array["account"]["your_email_template"] = array("USER_FIRST_NAME", "USER_LAST_NAME", "LOGO_URL", "SIGNATURE", "OR_ANY_VARIABLE_YOU_WANT_TO_ADD");
+
+        return $templates_array;
+    });
+                                                    </pre>
+
+                                                    This also requires to add this email template in email_templates table while installing the plugin.
+
+                                                    <pre>
+
+    INSERT INTO `email_templates` (`template_name`, `email_subject`, `default_message`, `custom_message`, `deleted`) VALUES ('your_email_template', 'Email subject', 'CONTENT OF YOUR EMAIL TEMPLATE', '', '0');
+                                                    </pre>
+                                                    Customize email notification.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_send_email_notification', function ($data) {
+        //available values in $data
+        //check .../app/Helpers/notifications_helper.php > function send_notification_emails() for better ideas
+        $notification_info = get_array_value($data, "notification");
+        $parser_data = get_array_value($data, "parser_data");
+        $user_language = get_array_value($data, "user_language");
+
+        //check if it's your plugin's notification otherwise it'll send for all notifications
+        if ($notification->event !== "your_notification_key") {
+            return $data;
+        }
+
+        $Email_templates_model = model("App\Models\Email_templates_model");
+        $email_template = $Email_templates_model->get_final_template("your_email_template", true);
+
+        $parser_data["ANY_VARIABLE"] = "value";
+
+        $parser = \Config\Services::parser();
+        $message = get_array_value($email_template, "message_$user_language") ? get_array_value($email_template, "message_$user_language") : get_array_value($email_template, "message_default");
+        $subject = get_array_value($email_template, "subject_$user_language") ? get_array_value($email_template, "subject_$user_language") : get_array_value($email_template, "subject_default");
+        $message = $parser->setData($parser_data)->renderString($message); //modify email message
+        $subject = $parser->setData($parser_data)->renderString($subject); //modify email subject
+
+        //add attachment
+        //showing demo of sending an invoice pdf
+        $invoice_data = get_invoice_making_data(invoice_id);
+        $attachement_url = prepare_invoice_pdf($invoice_data, "send_email");
+        $email_options["attachments"] = array(array("file_path" => $attachement_url));
+
+        $info_array = array(
+            "subject" => $subject,
+            "message" => $message,
+            "email_options" => $email_options,
+            "attachement_url" => $attachement_url,
+        );
+
+        return $info_array;
+    });
+                                                    </pre>
+
+                                                </li>
+                                                <li>
+                                                    Add a payment method in the Settings > Setup > Payment methods table.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_payment_method_settings', function($settings) {
+        $settings["payment_method_name"] = array(
+            array("name" => "pay_button_text", "text" => app_lang("pay_button_text"), "type" => "text", "default" => "Payment Method"), //required
+            array("name" => "payment_method_setting_text", "text" => "Payment method setting (Text)", "type" => "text", "default" => ""),
+            array("name" => "payment_method_setting_boolean", "text" => "Payment method setting (Boolean)", "type" => "boolean", "default" => "0"),
+            array("name" => "payment_method_setting_readonly", "text" => "Payment method setting (Readonly)", "type" => "readonly", "default" => "This is the readonly value"),
+        );
+
+        return $settings;
+    });
+                                                    </pre>
+
+                                                    This also requires to add this payment method in payment_methods table while installing the plugin.
+
+                                                    <pre>
+
+    INSERT INTO `payment_methods` (`title`, `type`, `description`, `online_payable`, `available_on_invoice`, `minimum_payment_amount`, `settings`, `deleted`) VALUES ('Payment method name', 'payment_method_name', 'Payment method description', 1, 0, 0, '', 0);  
+                                                    </pre>
+
+                                                    <p>Please note that, on deactivation of a payment method plugin, the payment method will still be shown in payment method settings. Because of this, use register_deactivation_hook() and set deleted=1 and register_activation_hook() to revert it again by deleted=0. </p>
+                                                </li>
+                                                <li>
+                                                    Show activated payment method in invoice view. 
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_invoice_payment_extension', function($payment_method_variables) {
+        if (get_array_value($payment_method_variables, "method_type") === "my_payment_method") {
+            echo view("My_Payment_Method\Views\index", $payment_method_variables);
+        }
+    });
+                                                    </pre>
+
+                                                    <p>The $payment_method_variables array() has this key values:</p>
+
+                                                    <ol>
+                                                        <li>method_type: The current payment method type of available activated payment methods. </li>
+                                                        <li>payment_method: The information array of payment method. </li>
+                                                        <li>balance_due: Total due balance for the invoice. </li>
+                                                        <li>currency: Currency for this invoice. </li>
+                                                        <li>invoice_info: The info object of invoice. </li>
+                                                        <li>invoice_id: Current invoice id. </li>
+                                                        <li>contact_user_id: For which client contact this invoice has been shared. (This variable will be available for public invoices) </li>
+                                                        <li>verification_code: The code to verify if it's a valid public invoice. (This variable will be available for public invoices) </li>
+                                                    </ol>
+                                                </li>
+                                                <li>
+                                                    Add ajax tab to several places.
+
+                                                    <pre>
+
+    //add ajax tab in staff profile 
+    app_hooks()->add_filter('app_filter_staff_profile_ajax_tab', function ($hook_tabs, $user_id) {
+        $hook_tabs[] = array(
+            "title" => app_lang("tab_title"),
+            "url" => get_uri("my_plugin/my_tab"),
+            "target" => "my-plugin-my-tab"
+        );
+
+        return $hook_tabs;
+    });
+                                                    </pre>
+
+                                                    Available hooks to add ajax tabs:
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_client_details_ajax_tab', 'function_to_add_tab'); //parameter: $hook_tabs, $client_id
+    app_hooks()->add_filter('app_filter_client_profile_ajax_tab', 'function_to_add_tab'); //parameter: $hook_tabs, $client_contact_id
+    app_hooks()->add_filter('app_filter_lead_details_ajax_tab', 'function_to_add_tab'); //parameter: $hook_tabs, $lead_id
+    app_hooks()->add_filter('app_filter_lead_profile_ajax_tab', 'function_to_add_tab'); //parameter: $hook_tabs, $lead_contact_id
+    app_hooks()->add_filter('app_filter_integration_settings_tab', 'function_to_add_tab'); //parameter: $hook_tabs
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add an item to settings.
+
+                                                    <pre>
+
+    app_hooks()->add_filter('app_filter_admin_settings_menu', function($settings_menu) {
+        $settings_menu["setup"][] = array("name" => "my_plugin_setting", "url" => "my_plugin/setting");
+        return $settings_menu;
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Show something in signin view.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_signin_extension', function() {
+        //show something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Show something in signup view.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_signup_extension', function() {
+        //show something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Show something in main view of page layout to a login user.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_layout_main_view_extension', function() {
+        //show something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Include something inside head tag.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_head_extension', function() {
+        //include something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Show something at the top of dashboard like announcement alerts.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_dashboard_announcement_extension', function() {
+        //show something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    An user signed in. 
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_after_signin', function() {
+        //do something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    An user signing out. 
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_before_signout', function() {
+        //do something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add an option in role settings.
+
+                                                    <ol>
+                                                        <li>
+                                                            Show role within a &#60;li>&#60;/li> block. Check .../app/Views/roles/permissions.php file for better ideas. <br />
+                                                            You'll get your permission value with array key like this: $your_permission = get_array_value($permissions, "your_permission");
+                                                            <pre>
+
+    app_hooks()->add_action('app_hook_role_permissions_extension', function () {
+        //show a role setting
+    });
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Save role setting.
+                                                            <pre>
+
+    app_hooks()->add_filter('app_filter_role_permissions_save_data', function ($permissions) {
+        $request = \Config\Services::request();
+        $permissions["your_permission"] = $request->getPost('your_permission');
+
+        return $permissions;
+    });
+                                                            </pre>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li>
+                                                    Show something on the right panel of task view.
+
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_task_view_right_panel_extension', function() {
+        //show something
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add setting on several places.
+
+                                                    <ol>
+                                                        <li>
+                                                            Add option in general settings.
+
+                                                            <pre>
+
+    app_hooks()->add_action('app_hook_general_settings_extension', 'function_to_add_setting');
+    app_hooks()->add_action('app_hook_general_settings_save_data', 'function_to_save_setting');
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Add option in client permissions setting.
+
+                                                            <pre>
+
+    app_hooks()->add_action('app_hook_client_permissions_extension', 'function_to_add_setting');
+    app_hooks()->add_action('app_hook_client_permissions_save_data', 'function_to_save_setting');
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Add option in team member's my preferences setting.
+
+                                                            <pre>
+
+    app_hooks()->add_action('app_hook_team_members_my_preferences_extension', 'function_to_add_setting');
+    app_hooks()->add_action('app_hook_team_members_my_preferences_save_data', 'function_to_save_setting');
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Add option in client's my preferences setting.
+
+                                                            <pre>
+
+    app_hooks()->add_action('app_hook_clients_my_preferences_extension', 'function_to_add_setting');
+    app_hooks()->add_action('app_hook_clients_my_preferences_save_data', 'function_to_save_setting');
+                                                            </pre>
+                                                        </li>
+                                                    </ol>
+
+                                                    Example: <br />
+                                                    Show option in general setting:
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_general_settings_extension', function() {
+        //show settings
+        //show a setting block (&#60;div class="form-group">)
+        //check .../app/Views/settings/general.php for better ideas
+        echo view("My_Plugin\Views\setting");
+    });
+                                                    </pre>
+                                                    Save setting:
+                                                    <pre>
+
+    app_hooks()->add_action('app_hook_general_settings_save_data', function () {
+        $request = \Config\Services::request();
+        $your_setting_value = $request->getPost("your_setting");
+
+        $Settings_model = model("App\Models\Settings_model");
+        $Settings_model->save_setting("your_setting", $your_setting_value);
+    });
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add ajax tab on project details page.
+
+                                                    <pre>
+
+    //add ajax tab in staff profile 
+    app_hooks()->add_filter('app_filter_team_members_project_details_tab', function ($project_tabs_of_hook_of_staff, $project_id = 0) {
+        $project_tabs_of_hook_of_staff["my_tab_title_with_available_language_key_value"] = "my_plugin/my_tab_url";
+        $project_tabs_of_hook_of_staff["my_tab_another_title_with_available_language_key_value"] = "my_plugin/my_another_tab_url";
+
+        return $project_tabs_of_hook_of_staff;
+    });
+
+    //available filter for clients
+    app_hooks()->add_filter('app_filter_clients_project_details_tab', 'function_to_add_tab'); //parameter: $project_tabs_of_hook_of_staff, $project_id
+                                                    </pre>
+                                                </li>
+                                                <li>
+                                                    Add custom storage integration. 
+
+                                                    <ol>
+                                                        <li>
+                                                            First define the constant PLUGIN_CUSTOM_STORAGE on pre_system event.
+
+                                                            <pre>
+
+    Events::on('pre_system', function () {
+        if (!defined('PLUGIN_CUSTOM_STORAGE')) {
+            define('PLUGIN_CUSTOM_STORAGE', TRUE);
+        }
+    });
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            While uploading a file, upload it to temporary directory first.
+
+                                                            <pre>
+
+    app_hooks()->add_action('app_hook_upload_file_to_temp', function ($data) {
+        $temp_file = get_array_value($data, "temp_file");
+        $file_name = get_array_value($data, "file_name");
+
+        \Your_Storage_Integration\Libraries\Your_Storage_Integration::upload_file_to_temp($temp_file, $file_name);
+        //check upload_file_to_temp() function on .../app/Helpers/app_files_helper.php for better ideas
+    });
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Move temp file to permanent directory.
+
+                                                            <pre>
+
+    app_hooks()->add_filter('app_filter_move_temp_file', function ($data) {
+        $related_to = get_array_value($data, "related_to");
+        $file_name = get_array_value($data, "file_name");
+        $new_filename = get_array_value($data, "new_filename");
+        $file_content = get_array_value($data, "file_content");
+        $source_path = get_array_value($data, "source_path");
+        $target_path = get_array_value($data, "target_path");
+        $direct_upload = get_array_value($data, "direct_upload");
+
+        $files_data = \Your_Storage_Integration\Libraries\Your_Storage_Integration::move_temp_file($file_name, $new_filename); //use necessary parameters
+        //check move_temp_file() function on .../app/Helpers/app_files_helper.php for better ideas
+
+        return $files_data;
+    });
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Download file by retrieving the content of file.
+
+                                                            <pre>
+
+    app_hooks()->add_filter('app_filter_get_file_content', function ($data) {
+        $file_info = get_array_value($data, "file_info");
+
+        $file_id = get_array_value($file_info, "file_id");
+        //you can use any key here instead of file_id which is needed to download the content
+        //but you should pass that key and value on app_filter_move_temp_file hook (on returning $files_data array)
+        //check download_app_files() function on .../app/Controllers/App_Controller.php for better ideas
+
+        return \Your_Storage_Integration\Libraries\Your_Storage_Integration::get_file_content($file_id); 
+    });
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Get the source url of file to show preview. 
+
+                                                            <pre>
+
+    app_hooks()->add_filter('app_filter_get_source_url_of_file', function ($data) {
+        //check get_source_url_of_file() function on .../app/Helpers/app_files_helper.php for better ideas
+        $file_info = get_array_value($data, "file_info");
+
+        $file_id = get_array_value($file_info, "file_id");
+        return \Your_Storage_Integration\Libraries\Your_Storage_Integration::get_source_url_of_file($file_id);
+    });
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Delete file.
+
+                                                            <pre>
+
+    app_hooks()->add_action('app_hook_delete_app_file', function ($file_info) {
+        //check delete_app_files() function on .../app/Helpers/app_files_helper.php for better ideas
+        $file_id = get_array_value($file_info, "file_id");
+        \Your_Storage_Integration\Libraries\Your_Storage_Integration::delete_file($file_id);
+    });
+                                                            </pre>
+                                                        </li>
+                                                        <li>
+                                                            Process pasted images from content. 
+
+                                                            <pre>
+
+    app_hooks()->add_filter('app_filter_process_images_from_content', function ($content) {
+        //sometimes you may need to update the source url of pasted images in rich text editor
+        return $updated_content;
+                                                            Add a folder to Google Drive valid folders array. 
+
+                                                            <pre>
+
+    app_hooks()->add_filter('app_filter_add_folder_to_google_drive_valid_folders_array', function ($folders_array) {
+        if (!in_array("your_folder", $folders_array)) {
+            array_push($folders_array, "your_folder");
+        }
+
+        return $folders_array;
+    });
+                                                            </pre>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="best_practices">
+                                    <div class="card card-default">
+                                        <div class="page-title clearfix">
+                                            <h2 class="text-body">Best practices</h2>
+                                        </div>
+                                        <div class="p20">
+                                            <p>Please follow this best practices while developing your plugin:</p>
+                                            <ul>
+                                                <li>Always add a prefix on function names, class names and database tables.</li>
+                                                <li>Don't load plugin assets (like css/js) on all places. Load it only where it needed.</li>
+                                                <li>Don't insert anything in settings table for your plugin purposes. Create your own table to store settings for your own. But you can get data of settings table always. </li>
+                                                <li>
+                                                    To prevent showing directory listing, add an index.html file on all sub folders of your plugin. You can use this code:
+
+                                                    <pre>
+
+    &#60;html>
+        &#60;head>
+                &#60;title>403 Forbidden&#60;/title>
+        &#60;/head>
+        &#60;body>
+
+            &#60;p>Directory access is forbidden.&#60;/p>
+
+        &#60;/body>
+    &#60;/html>
+                                                    </pre>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function sticky_relocate() {
+                var window_top = $(window).scrollTop();
+                var div_top = $('#sticky-anchor').offset().top;
+                if (window_top > div_top) {
+                    $('#sticky').addClass('stick');
+                    $('body').addClass('sticky-toggled');
+                } else {
+                    $('#sticky').removeClass('stick');
+                    $('body').removeClass('sticky-toggled');
+                }
+            }
+
+            $(function () {
+                $(window).scroll(sticky_relocate);
+                sticky_relocate();
+            });
+        </script>
+
+    </body>
+</html>

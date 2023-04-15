@@ -1,0 +1,10 @@
+{
+    "require": {
+        "ddeboer/imap": "^1.17"
+    },
+    "config": {
+        "platform": {
+            "php": "8.1"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "caxy/php-htmldiff": "^0.1.14"
+    }
+}

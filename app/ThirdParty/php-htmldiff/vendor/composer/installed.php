@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-next',
+        'version' => 'dev-next',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => 'e3603fbe82ec01fe67525b15e74b1c012936d4d5',
+        'name' => '__root__',
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-next',
+            'version' => 'dev-next',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => 'e3603fbe82ec01fe67525b15e74b1c012936d4d5',
+            'dev_requirement' => false,
+        ),
+        'caxy/php-htmldiff' => array(
+            'pretty_version' => 'v0.1.14',
+            'version' => '0.1.14.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../caxy/php-htmldiff',
+            'aliases' => array(),
+            'reference' => '3f8ee7edda3d7c6d2e58a02d70a12d3242c84ea5',
+            'dev_requirement' => false,
+        ),
+        'ezyang/htmlpurifier' => array(
+            'pretty_version' => 'v4.14.0',
+            'version' => '4.14.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ezyang/htmlpurifier',
+            'aliases' => array(),
+            'reference' => '12ab42bd6e742c70c0a52f7b82477fcd44e64b75',
+            'dev_requirement' => false,
+        ),
+    ),
+);
